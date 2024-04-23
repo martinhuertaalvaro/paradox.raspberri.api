@@ -1,7 +1,10 @@
-from flask import Flask, jsonify
+from flask import Flask,jsonify
 import random
+from flask_cors import CORS
+
 
 app = Flask(__name__)
+CORS(app, origins=['http://localhost:4200'])
 
 @app.route('/')
 def index():
